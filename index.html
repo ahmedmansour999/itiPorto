@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="container" >
+
+
+        <!-- nav bar mark here -->
+        <div class="navbar">
+            <div class="search" id="search">
+                <input type="text">
+                <button id="searchBtn"><ion-icon name="search-outline"></ion-icon></button>
+            </div>
+            <div class="log">
+                <img src="./media/logo.svg" alt="logo">
+            </div>
+            <div class="action">
+                <button id="Guest"  >
+                    <a href="./user/login.html" id="userHerf"><ion-icon name="person-outline"></ion-icon>
+                        <p id="userName">User</p></a>
+                </button>
+                <button  id="Admin" >
+                    <a href="#" id="adminHerf"><ion-icon name="person-outline"></ion-icon>
+                        <p id="userName">Admin</p></a>
+                </button>
+                <button onclick="showCart()">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <p>Cart</p>
+                </button>
+                <button onclick="showFav()">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <p>Wishlisht</p>
+                </button>
+                <button id="logout" >
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <p>Logout</p>
+                </button>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- navbar links mark here -->
+        <div class="navlinks">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="navDetail">
+                <p>Fashion Everyday</p>
+                <h2>Unrivalled Fashion House</h2>
+                <button><a href="#">Shop Now</a> <ion-icon name="arrow-forward-circle-outline" class="arrow"></ion-icon></button>
+            </div>
+        </div>
+
+                <!-- service links mark here -->
+
+        <div class="service">
+            <div class="service-item">
+                <i class="fas fa-truck"></i>
+                <p>Free Shipping<br><span>On All Order Over $599 </span></p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-box-open"></i>
+                <p>Easy Returns<br><span>30 Day Returns Policy </span></p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-credit-card"></i>
+                <p>Secure Payment<br><span>100% Secure Gaurantee</span></p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-headset"></i>
+                <p>Special Support<br><span>24/7 Dedicated Support </span></p>
+            </div>
+        </div>
+
+                <!-- section category mark here -->
+
+        <div class="category">
+            <div class="choise">
+                <div class="item">
+                    <img src="./media/category-1.jpg" alt="pic">
+                    <button><a href="#added" class="category-link" data-category="men's clothing">Men</a></button>
+                </div>
+                <div class="item">
+                    <img src="./media/category-2.jpg"  alt="pic">
+                    <button><a href="#added" class="category-link" data-category="women's clothing">Woman</a></button>
+                </div>
+            </div>
+        </div>
+
+                <!-- section product mark here -->
+        <div class="product-container">
+            <h1>Products of the week </h1>
+            <ul >
+                <li><a href="#"  class="category-link selected" data-category="all" >All</a></li>
+                <li><a href="#" class="category-link" data-category="men's clothing">Men</a></li>
+                <li><a href="#" class="category-link" data-category="women's clothing">Women</a></li>
+                <li><a href="#" class="category-link" data-category="electronics">Electronics</a></li>
+                <li><a href="#" class="category-link" data-category="jewelery">Jewelery</a></li>
+            </ul>
+
+            <div class="products" id="products">
+            
+            </div>
+        </div>
+
+        <div class="added" id="added"></div>
+
+                <!-- section product mark here -->
+        <div class="Subscribe">
+            <div class="emaildetails">
+                <h1>Subscribe Newsletter</h1>
+                <p>Enter your email below to be the first to know about new collections and product launches.</p>
+                <div class="email">
+                    <input type="email">
+                    <button>Subscribe <ion-icon class="iconscript" name="arrow-forward-circle-outline" class="arrow"></ion-icon> </button>
+                </div>
+            </div>
+        </div>
+
+
+                        <!-- footer mark here -->
+        <div class="footer">
+            
+            <div class="footer-brand">
+                <img src="./media/logo.svg" alt="logo" width="100px" height="100px">
+                <p>Casmart is a fashion theme for presents a complete wardrobe of uniquely crafted Ethnic Wear, Casuals, Edgy Denims, & Accessories inspired from the most contemporary</p>
+                <div class="footer-icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </div>
+            </div>
+            <div class="footer-list">
+                <div class="item">
+                    <h3>information</h3>
+                    <ul>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">About Company</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Payment Type</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Award Wining</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Become an Agent</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Men </a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Women</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Jewelery</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Electronics</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">FaceBook</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Twitter</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">GitHub</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Gmail</a></li>
+                        <li><ion-icon name="arrow-forward-outline"></ion-icon><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+                        <!-- cart products mark here -->
+    <div class="cart-product-container">
+        <h1 class="header-cart" >Your Cart</h1>
+        <button class="close" onclick="hideCart()"><ion-icon name="close-outline"></ion-icon></button>
+        <div class="carts-products">
+            
+        </div>
+    </div>
+
+                            <!-- fav products mark here -->
+    <div class="fav-product-container">
+        <h1 class="header-fav" > Favroute product</h1>
+        <button class="close" onclick="hideFav()"><ion-icon name="close-outline"></ion-icon></button>
+        <div class="fav-products">
+            
+        </div>
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

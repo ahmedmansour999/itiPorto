@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./user-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./user.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.0/build/player/lottie.min.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="userContainer">
+        <div class="Login">
+            <h1>Login</h1>
+            <div class="img"></div>
+            <form class="formLogin" method="post" onsubmit="return false;">
+                <input class="email" type="text" placeholder="Email address">
+                <input class="password" type="password" placeholder="Password">
+                <input class="submitLogin" type="submit" value="Log in">
+                <hr>
+                <button><a href="./signup.html" id="signupLink">Sign up</a></button>
+            </form>
+        </div>
+    </div>
+
+
+
+<script type="module">
+
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyCpwqQ7p63yIdVuoO5979xKgASH2-fGl5A",
+            authDomain: "e-commerce-112bf.firebaseapp.com",
+            projectId: "e-commerce-112bf",
+            storageBucket: "e-commerce-112bf.appspot.com",
+            messagingSenderId: "261239594738",
+            appId: "1:261239594738:web:dea951ccbf6c0a098fba6b"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const firestore = getFirestore(app);
+        const auth = getAuth(app);
+
+
+function signIn(email, password) {
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            window.location.href = '../index.html';
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(`Login error (${errorCode}): ${errorMessage}`);
+        });
+
+}
+
+document.querySelector('.submitLogin').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const emailInput = document.querySelector('.email').value;
+    const passwordInput = document.querySelector('.password').value;
+    signIn(emailInput, passwordInput);
+});
+
+</script>
+
+</body>
+</html>

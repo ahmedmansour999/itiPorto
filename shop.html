@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <hr>
+
+        <!-- navbar links mark here -->
+        <div class="navlinks">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="navDetail">
+                <p>Fashion Everyday</p>
+                <h2>Unrivalled Fashion House</h2>
+                <button><a href="#">Shop Now</a> <ion-icon name="arrow-forward-circle-outline" class="arrow"></ion-icon></button>
+            </div>
+        </div>
+
+
+<div class="category">
+    <div class="choise">
+        <div class="item">
+            <img src="./media/category-1.jpg" alt="pic">
+            <button><a href="#added" class="category-link" data-category="men's clothing">Men</a></button>
+        </div>
+        <div class="item">
+            <img src="./media/category-2.jpg"  alt="pic">
+            <button><a href="#added" class="category-link" data-category="women's clothing">Woman</a></button>
+        </div>
+    </div>
+</div>
+
+        <!-- section product mark here -->
+<div class="product-container">
+    <h1>Products of the week </h1>
+    <ul >
+        <li><a href="#"  class="category-link selected" data-category="all" >All</a></li>
+        <li><a href="#" class="category-link" data-category="men's clothing">Men</a></li>
+        <li><a href="#" class="category-link" data-category="women's clothing">Women</a></li>
+        <li><a href="#" class="category-link" data-category="electronics">Electronics</a></li>
+        <li><a href="#" class="category-link" data-category="jewelery">Jewelery</a></li>
+    </ul>
+
+    <div class="products" id="products">
+    
+    </div>
+</div>
+
+<div class="added" id="added"></div>
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
