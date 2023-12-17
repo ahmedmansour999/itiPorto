@@ -184,3 +184,10 @@ button:hover a{
 button:hover a{
     color: white !important;
 }
+
+
+@media screen and (max-width : 768px) {
+    .userContainer .Login , .userContainer .signup{
+        width: 85%;
+    }
+}
